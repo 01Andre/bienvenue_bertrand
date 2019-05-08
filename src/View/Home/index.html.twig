@@ -11,9 +11,9 @@
                         vous connecter avec vos identifiants Facebook pour vérifier votre identité et votre âge.</p>
                     <form method="post" action="/Home/index">
                         <div class="row justify-content-center">
-                            <input class="col-6 m-3" type="text" name="loginName"
+                            <input class="col-6 m-3" type="text" required name="loginName"
                                    placeholder="Votre identifiant">
-                            <input class="col-6 m-3" type="password" name="loginPassword"
+                            <input class="col-6 m-3" type="password" required name="loginPassword"
                                    placeholder="Votre mot de passe">
                         </div>
                         {% if session.errors.0 %}

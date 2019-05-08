@@ -44,7 +44,7 @@ class HomeController extends AbstractController
         if (!isset($_SESSION)) {
             session_start();
         }
-        if (empty($_SESSION['mdp'][2])) {
+        if (!isset($_SESSION['mdp'][2])) {
             header('location:/Home/index');
         }
         return $this->twig->render('Home/wcs.html.twig', ['session' => $_SESSION,]);
@@ -56,7 +56,7 @@ class HomeController extends AbstractController
         if (!isset($_SESSION)) {
             session_start();
         }
-        if (empty($_SESSION['mdp'][2])) {
+        if (!isset($_SESSION['mdp'][2])) {
             header('location:/Home/index');
         }
         return $this->twig->render('Home/kahoot.html.twig', ['session' => $_SESSION,]);
