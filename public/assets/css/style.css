@@ -3,3 +3,18 @@ header {
     color: white;
     font-size: large;
 }
+
+.enorme{
+    font-size: 10vw;
+    color: darkred;
+    font-weight: bold;
+}
+
+.kahoot{
+    background-image: url("../images/kahoot.jpg");
+    background-size: cover;
+}
+
+.remplissage{
+    height: 700px;
+}

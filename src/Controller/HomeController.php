@@ -39,9 +39,26 @@ class HomeController extends AbstractController
 
 
     public function wcs()
-    {if (!isset($_SESSION)) {
-        session_start();
+
+    {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        if (empty($_SESSION['mdp'][2])) {
+            header('location:/Home/index');
+        }
+        return $this->twig->render('Home/wcs.html.twig', ['session' => $_SESSION,]);
     }
-        return $this->twig->render('Home/wcs.html.twig',['session' => $_SESSION,]);
+
+    public function quizz()
+
+    {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        if (empty($_SESSION['mdp'][2])) {
+            header('location:/Home/index');
+        }
+        return $this->twig->render('Home/kahoot.html.twig', ['session' => $_SESSION,]);
     }
 }
