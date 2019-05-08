@@ -21,6 +21,27 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $_SESSION['mdp'][] = $_POST['loginPassword'];
+                $_SESSION['errors'][] = 'essai';
+                if (isset($_SESSION['mdp'][2])) {
+                    header('location:/Home/wcs');
+                }
+            }
+            return $this->twig->render('Home/index.html.twig', ['session' => $_SESSION,]);
+        }
+    }
+
+
+    public function wcs()
+    {if (!isset($_SESSION)) {
+        session_start();
+    }
+        return $this->twig->render('Home/wcs.html.twig',['session' => $_SESSION,]);
     }
 }

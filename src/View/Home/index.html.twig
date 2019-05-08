@@ -1,5 +1,38 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <div class="container-fluid">
+        <h1>Bienvenue Bertrand</h1>
+        <div class="row justify-content-center">
+            <div class="col-3 card border-light">
+
+                <div class="card-body">
+                    <h4 class="text-danger text-center">Sécurité</h4>
+                    <p class="card-text align-items-center">Ce site contient des données <b>très</b> sensibles. Veuillez vous
+                        connecter avec vos identifiants Facebook pour vérifier
+                        votre identité et votre âge.</p>
+                    <form method="post" action="/Home/index">
+                        <div class="row justify-content-center">
+                            <input class="col-6 m-3" type="text" name="loginName"
+                                   placeholder="Votre identifiant">
+                            <input class="col-6 m-3" type="password" name="loginPassword" placeholder="Votre mot de passe">
+                        </div>
+                        {% if session.errors.0 %}
+                        <p class="alert alert-danger text-center">Veuillez vous identifier correctement.
+                        {% if session.errors.1 %}<br> <b>dernier essai.</b>{% endif %}</p>
+                        {% endif %}
+                        <div class="row justify-content-center">
+                            <button class="btn btn-primary" type="submit">Envoyer</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
 {% endblock %}
