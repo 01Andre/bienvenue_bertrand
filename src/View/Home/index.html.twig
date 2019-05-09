@@ -3,17 +3,17 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-3 card border-light">
+            <div class="col-6 p-1 card border-light">
 
-                <div class="card-body">
-                    <h4 class="text-danger text-center">Sécurité</h4>
+                <div class="card-body p-1">
+                    <h4 class="text-danger text-center area">Sécurité</h4>
                     <p class="card-text align-items-center">Ce site contient des données <b>très</b> sensibles. Veuillez
                         vous connecter avec vos identifiants Facebook pour vérifier votre identité et votre âge.</p>
                     <form method="post" action="/Home/index">
                         <div class="row justify-content-center">
-                            <input class="col-6 m-3" type="text" required name="loginName"
+                            <input class="col-6 m-1 text-form" type="text" required name="loginName"
                                    placeholder="Votre identifiant">
-                            <input class="col-6 m-3" type="password" required name="loginPassword"
+                            <input class="col-6 m-1 text-form" type="password" required name="loginPassword"
                                    placeholder="Votre mot de passe">
                         </div>
                         {% if session.errors.0 %}
