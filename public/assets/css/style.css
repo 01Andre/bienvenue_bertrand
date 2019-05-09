@@ -18,3 +18,11 @@ header {
 .remplissage{
     height: 700px;
 }
+
+.question{
+    font-size: xx-large;
+}
+
+.reponse {
+    font-size: large;
+}

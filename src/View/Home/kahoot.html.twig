@@ -5,19 +5,21 @@
     <div class="container-fluid kahoot p-5">
 
 
-<div class="row justify-content-center p-5">
-    <div class="col-3 p-5 justify-content-center text-center">
-        <input type="text" placeholder="GAME PIN" class="m-3 text-center">
-        <a class="btn btn-secondary m-2 align-self-center" href="/Home/kahoot1"><b>ENTER!</b></a>
-        <a class="btn btn-secondary m-2" href="/Home/kahoot1"><b>Vous êtes lourds, vous avez déjà fait le coup du mot de passe</b></a>
+        <div class="row justify-content-center p-5">
+            <div class="col-3 p-5 justify-content-center text-center">
+                <form action="/Home/questions">
+                    <input type="text" required placeholder="GAME PIN" class="m-3 text-center">
+                    <button class="btn btn-secondary m-2 align-self-center" type="submit"><b>ENTER!</b></button>
+                    <button class="btn btn-secondary m-2" type="submit"><b>Vous êtes lourds, vous avez déjà fait le coup
+                            du mot de passe</b></button>
+                </form>
+            </div>
 
-    </div>
-
-    <div class="remplissage">
+            <div class="remplissage">
 
 
-    </div>
+            </div>
 
-</div>
+        </div>
     </div>
 {% endblock %}
