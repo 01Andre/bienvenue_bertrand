@@ -63,4 +63,18 @@ class HomeController extends AbstractController
         }
         return $this->twig->render('Home/questions.html.twig', ['session' => $_SESSION,]);
     }
+
+    public function photos()
+    {
+        if (empty($_SESSION)) {
+            session_start();
+        }
+        if (empty($_SESSION['mdp'][2])) {
+            header('location:/Home/index');
+        }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            echo 'OK';
+        }
+        return $this->twig->render('Home/photos.html.twig', ['session' => $_SESSION,]);
+    }
 }
