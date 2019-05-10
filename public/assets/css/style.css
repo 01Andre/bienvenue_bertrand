@@ -231,4 +231,15 @@ body {
 }
 
 
+.question{
+    font-size:20px;
+}
 
+.progress-height-big {
+    height: 50px;
+}
+
+.progress-height-little {
+    height: 5px;
+    font-size:0;
+}
