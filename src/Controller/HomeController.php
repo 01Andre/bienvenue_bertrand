@@ -96,4 +96,13 @@ class HomeController extends AbstractController
         }
         return $this->twig->render('Home/pr.html.twig', ['session' => $_SESSION,]);
     }
+
+
+    public function dojo()
+    {
+        if (empty($_SESSION)) {
+            session_start();
+        }
+        return $this->twig->render('Home/dojo.html.twig', ['session' => $_SESSION,]);
+    }
 }
