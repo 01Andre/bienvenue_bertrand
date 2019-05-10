@@ -1,4 +1,4 @@
-a&qW<&{% extends 'layout.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block content %}
     <audio autoplay="true" loop>
@@ -6,8 +6,6 @@ a&qW<&{% extends 'layout.html.twig' %}
         Votre navigateur n'est pas compatible
     </audio>
     <div class="container-fluid kahoot p-5">
-
-
         <div class="row justify-content-center p-5">
             <div class="col-5 p-5 justify-content-center text-center">
                 <form action="/Home/questions">
@@ -19,12 +17,8 @@ a&qW<&{% extends 'layout.html.twig' %}
                             du mot de passe</b></button>
                 </form>
             </div>
-
             <div class="remplissage">
-
-
             </div>
-
         </div>
     </div>
 {% endblock %}
