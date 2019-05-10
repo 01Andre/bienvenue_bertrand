@@ -17,6 +17,9 @@
 
 .kahoot{
     background-image: url("../images/kahoot.jpg");
+    height: 100vh;
+    object-fit: cover;
+    width: 100vw;
     background-size: cover;
 }
 
