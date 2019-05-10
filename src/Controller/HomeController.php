@@ -74,6 +74,7 @@ class HomeController extends AbstractController
         }
         return $this->twig->render('Home/photos.html.twig', ['session' => $_SESSION,]);
     }
+
     public function success()
     {
         if (empty($_SESSION)) {
@@ -82,8 +83,17 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/success.html.twig', ['session' => $_SESSION,]);
     }
 
+
     public function gameOver()
     {
         return $this->twig->render('Home/gameOver.html.twig');
+    }
+
+    public function pr()
+    {
+        if (empty($_SESSION)) {
+            session_start();
+        }
+        return $this->twig->render('Home/pr.html.twig', ['session' => $_SESSION,]);
     }
 }
