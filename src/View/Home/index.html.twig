@@ -2,33 +2,53 @@
 
 {% block content %}
     <div class="container-fluid">
+
         <div class="row justify-content-center">
-            <div class="col-6 p-1 mt-3 card border-light">
+            <div class="col-2 p-1 mt-3 card border-light">
 
-                <div class="card-body p-1">
-                    <h4 class="text-danger text-center area">Sécurité</h4>
-                    <p class="card-text align-items-center">Ce site contient des données <b>très</b> sensibles. Veuillez
-                        vous connecter avec vos identifiants Facebook pour vérifier votre identité et votre âge.</p>
-                    <form method="post" action="/Home/index">
-                        <div class="row justify-content-center">
-                            <input class="col-6 m-1 text-form" type="text" required name="loginName"
-                                   placeholder="Votre identifiant">
-                            <input class="col-6 m-1 text-form" type="password" required name="loginPassword"
-                                   placeholder="Votre mot de passe">
-                        </div>
-                        {% if session.errors.0 %}
-                            <p class="alert alert-danger text-center">Veuillez vous identifier correctement.
-                                {% if session.errors.1 %}<br> <b>dernier essai.</b>{% endif %}</p>
-                        {% endif %}
-                        <div class="row justify-content-center">
-                            <button class="btn btn-primary" type="submit">Envoyer</button>
-                        </div>
+                <div class="counter">
 
-                    </form>
+                    <div class="employees">
+                        <p>Pendant ce temps ....</p>
+                        <p class="employee-p">Stats PR de Sylvain</p>
+                        <p class="counter-count counter-count-refused">150000</p>
+                        <p class="pr-status-refused">REFUSED</p>
+                    </div>
+
+                    <div class="employees">
+                        <p class="counter-count counter-count-success">15</p>
+                        <p class="pr-status-success">MERGED</p>
+                    </div>
                 </div>
             </div>
 
+
+        <div class="col-6 p-1 mt-3 card border-light">
+
+            <div class="card-body p-1">
+                <h4 class="text-danger text-center area">Sécurité</h4>
+                <p class="card-text align-items-center">Ce site contient des données <b>très</b> sensibles. Veuillez
+                    vous connecter avec vos identifiants Facebook pour vérifier votre identité et votre âge.</p>
+                <form method="post" action="/Home/index">
+                    <div class="row justify-content-center">
+                        <input class="col-6 m-1 text-form" type="text" required name="loginName"
+                               placeholder="Votre identifiant">
+                        <input class="col-6 m-1 text-form" type="password" required name="loginPassword"
+                               placeholder="Votre mot de passe">
+                    </div>
+                    {% if session.errors.0 %}
+                        <p class="alert alert-danger text-center">Veuillez vous identifier correctement.
+                            {% if session.errors.1 %}<br> <b>dernier essai.</b>{% endif %}</p>
+                    {% endif %}
+                    <div class="row justify-content-center">
+                        <button class="btn btn-primary" type="submit">Envoyer</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
+
+    </div>
 
 
     </div>
