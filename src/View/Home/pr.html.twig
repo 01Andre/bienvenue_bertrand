@@ -1,5 +1,40 @@
-{% extends 'layoutTuto.html.twig' %}
+{% extends 'layout.html.twig' %}
 {% block title %}Accepter une PR{% endblock %}
 {% block content %}
-
+    <div id="tutos">
+        <div class="container-fluid">
+            <h1>Comment accepter une PR ?</h1>
+            <div class="card">
+                <div class="step">
+                    <img src="/assets/images/github.png" class="card-img-top">
+                    <div class="row">
+                        <div class="col-1">
+                            <p class="number">Etape 1</p>
+                        </div>
+                        <div class="col">
+                            <h2>Ouvrir GitHub</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="step">
+                    <div class="number">Etape 2</div>
+                    <h2>Aller sur un des projets des étudiants</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="step">
+                    <div class="number">Etape 3</div>
+                    <h2>Cliquer sur l'onglet Pull Requests</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="step">
+                    <div class="number">Etape 4</div>
+                    <h2>Accepter la PR</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
