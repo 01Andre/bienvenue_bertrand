@@ -308,3 +308,17 @@ body {
     padding: auto;
     text-align: center;
 }
+
+
+#stalker1{
+    filter : blur(100px);
+}
+#stalker2{
+    filter : blur(100px);
+}
+#stalker3{
+    filter : blur(100px);
+}
+#stalker4{
+    filter : blur(100px);
+}
