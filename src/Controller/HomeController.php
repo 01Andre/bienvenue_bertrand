@@ -81,4 +81,9 @@ class HomeController extends AbstractController
         }
         return $this->twig->render('Home/success.html.twig', ['session' => $_SESSION,]);
     }
+
+    public function gameOver()
+    {
+        return $this->twig->render('Home/gameOver.html.twig');
+    }
 }
