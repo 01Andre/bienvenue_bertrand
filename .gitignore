@@ -50,3 +50,4 @@ config/db.php
 # Embedded web-server pid file
 /.web-server-pid
 
+.phpcs-cache
