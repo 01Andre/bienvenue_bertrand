@@ -3,53 +3,54 @@
 {% block title %}Sublimes photos{% endblock %}
 
 {% block content %}
-    <div class="container-fluid" id="photos">
-        <div class="row justify-content-center">
-            <div class="col-3">
-                <div class="card" id="stalker1">
-                    <img src="/assets/images/bertrand4.jpg" class="card-img-top stalker"  alt="Bertrand">
-                    <div class="card-body">
-                        <p class="card-text text-center">Nous</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card" id="stalker2">
-                    <img src="/assets/images/bertrand1.jpg" class="card-img-top stalker"  alt="Bertrand">
-                    <div class="card-body">
-                        <p class="card-text text-center">avons</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card" id="stalker3">
-                    <img src="/assets/images/bertrand2.jpg" class="card-img-top stalker"  alt="Bertrand">
-                    <div class="card-body">
-                        <p class="card-text text-center">des</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card" id="stalker4">
-                    <img src="/assets/images/bertrand3.jpg" class="card-img-top" alt="Bertrand">
-                    <div class="card-body">
-                        <h3 class="card-text text-center  text-danger">STALKERS</h3>
-                    </div>
+<div class="container-fluid" id="photos">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="card" id="stalker1">
+                <img src="/assets/images/bertrand4.jpg" class="card-img-top stalker" alt="Bertrand">
+                <div class="card-body">
+                    <p class="card-text text-center">Nous</p>
                 </div>
             </div>
         </div>
-        <div class="row mt-2 mb-5 justify-content-center">
-            {% if session.youtube <3 %}
-                <div class="col-3 text-center">
-                    <a class="btn btn-primary" href="/Home/dojo">T'es au point sur les dojo ?</a>
+        <div class="col-3">
+            <div class="card" id="stalker2">
+                <img src="/assets/images/bertrand1.jpg" class="card-img-top stalker" alt="Bertrand">
+                <div class="card-body">
+                    <p class="card-text text-center">avons</p>
                 </div>
-                <div class="col-3 text-center">
-                    <a class="btn btn-primary" href="/Home/pr">T'es au point sur les pr ?</a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" id="stalker3">
+                <img src="/assets/images/bertrand2.jpg" class="card-img-top stalker" alt="Bertrand">
+                <div class="card-body">
+                    <p class="card-text text-center">des</p>
                 </div>
-            {% else %}
-                <div class="col-12 text-center">
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=sx1TqNXr8fQ&feature=youtu.be">Le meilleur pour la fin</a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" id="stalker4">
+                <img src="/assets/images/bertrand3.jpg" class="card-img-top" alt="Bertrand">
+                <div class="card-body">
+                    <h3 class="card-text text-center  text-danger">STALKERS</h3>
                 </div>
-            {% endif %}
+            </div>
+        </div>
     </div>
-{% endblock %}
+    <div class="row mt-2 mb-5 justify-content-center">
+        {% if session.youtube <3 %}
+            <div class="col-3 text-center">
+                <a class="btn btn-primary" href="/Home/dojo">T'es au point sur les dojo ?</a>
+            </div>
+            <div class="col-3 text-center">
+                <a class="btn btn-primary" href="/Home/pr">T'es au point sur les pr ?</a>
+            </div>
+        {% else %}
+            <div class="col-12 text-center">
+                <a class="btn btn-primary" href="/Home/final">Le meilleur pour la fin</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+    {% endblock %}
