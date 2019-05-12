@@ -109,4 +109,12 @@ class HomeController extends AbstractController
         $_SESSION['youtube']++;
         return $this->twig->render('Home/dojo.html.twig', ['session' => $_SESSION,]);
     }
+    public function final()
+    {
+        if (empty($_SESSION)) {
+            session_start();
+        }
+        $_SESSION['youtube']++;
+        return $this->twig->render('Home/final.html.twig', ['session' => $_SESSION,]);
+    }
 }
