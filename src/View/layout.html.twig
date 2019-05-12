@@ -35,9 +35,11 @@
                 <li class="nav-item">
                     <a class="btn btn-secondary mb-0 ml-3" href="/Home/quizz">Un quizz?</a>
                 </li>
+                {% if session.youtube is defined %}
                 <li class="nav-item">
                     <a class="btn btn-danger mb-0 ml-3" href="/Home/photos">TOP SECRET, NE PAS CLIQUER</a>
                 </li>
+                {% endif %}
 
             </ul>
         </div>

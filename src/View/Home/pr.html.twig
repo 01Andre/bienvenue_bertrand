@@ -86,9 +86,15 @@
                 </div>
             </div>
             <div class="row mt-2 mb-5">
+                {% if session.youtube <3 %}
                 <div class="col-12 text-center">
                     <a class="btn btn-primary" href="/Home/dojo">T'es au point sur les dojo ?</a>
                 </div>
+                {% else %}
+                <div class="col-12 text-center">
+                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=sx1TqNXr8fQ&feature=youtu.be">Le meilleur pour la fin</a>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

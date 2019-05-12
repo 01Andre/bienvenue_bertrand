@@ -72,6 +72,7 @@ class HomeController extends AbstractController
         if (empty($_SESSION['mdp'][2])) {
             header('location:/Home/index');
         }
+        $_SESSION['youtube']++;
         return $this->twig->render('Home/photos.html.twig', ['session' => $_SESSION,]);
     }
 
@@ -80,6 +81,7 @@ class HomeController extends AbstractController
         if (empty($_SESSION)) {
             session_start();
         }
+        $_SESSION['youtube']=0;
         return $this->twig->render('Home/success.html.twig', ['session' => $_SESSION,]);
     }
 
@@ -94,6 +96,7 @@ class HomeController extends AbstractController
         if (empty($_SESSION)) {
             session_start();
         }
+        $_SESSION['youtube']++;
         return $this->twig->render('Home/pr.html.twig', ['session' => $_SESSION,]);
     }
 
@@ -103,6 +106,7 @@ class HomeController extends AbstractController
         if (empty($_SESSION)) {
             session_start();
         }
+        $_SESSION['youtube']++;
         return $this->twig->render('Home/dojo.html.twig', ['session' => $_SESSION,]);
     }
 }
